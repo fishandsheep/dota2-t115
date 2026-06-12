@@ -1,5 +1,7 @@
 import "./styles.css";
 
+const asset = (path) => `${import.meta.env.BASE_URL}assets/${path}`;
+
 const heroes = [
   {
     id: "viper",
@@ -9,7 +11,7 @@ const heroes = [
     rating: 98,
     origin: "Toxic Wastes",
     accent: "#9de25a",
-    portrait: "/assets/viper-portrait.png",
+    portrait: asset("viper-portrait.png"),
     tagline: "One throne. Three names. Eternal legacy.",
     summary:
       "A venomous dragon of ancient dominion. Corrosion is his breath, attrition his law, and the battlefield bends under toxic reign.",
@@ -33,7 +35,7 @@ const heroes = [
     rating: 95,
     origin: "Frostveil Ramparts",
     accent: "#9a7dff",
-    portrait: "/assets/drow-portrait.png",
+    portrait: asset("drow-portrait.png"),
     tagline: "Silence in the dark. Judgment in a heartbeat.",
     summary:
       "A sovereign archer who turns moonlight into execution. She owns the long lane, picks impossible angles, and erases hesitation with a single draw.",
@@ -57,7 +59,7 @@ const heroes = [
     rating: 97,
     origin: "Ember Sanctum",
     accent: "#ff7448",
-    portrait: "/assets/lion-portrait.png",
+    portrait: asset("lion-portrait.png"),
     tagline: "Hellfire counsel. A throne won by terror.",
     summary:
       "An infernal warlock king crowned in ruin. He dictates pace through fear, stuns the faithful, and turns one perfect cast into total collapse.",
@@ -80,19 +82,19 @@ const featureCards = [
     kicker: "01",
     title: "Hero Interactions",
     text: "Dynamic rivalries and synergies shape every clash. Choose your champion and define your destiny.",
-    image: "/assets/hero-interactions.png"
+    image: asset("hero-interactions.png")
   },
   {
     kicker: "02",
     title: "Skill Showcase",
     text: "Master iconic abilities and devastating combos. Precision, timing, and nerve decide all.",
-    image: "/assets/skill-showcase.png"
+    image: asset("skill-showcase.png")
   },
   {
     kicker: "03",
     title: "Battlefield Lore",
     text: "Uncover a shattered realm where every war leaves a scar and every legend leaves a mark.",
-    image: "/assets/battlefield-lore.png"
+    image: asset("battlefield-lore.png")
   }
 ];
 
@@ -155,7 +157,7 @@ function render() {
       <main>
         <section class="hero" id="hero">
           <div class="hero__backdrop">
-            <img src="/assets/reference-crimson-throne.png" alt="" />
+            <img src="${asset("reference-crimson-throne.png")}" alt="" />
           </div>
           <div class="hero__veil"></div>
           <div class="hero__content">
@@ -324,7 +326,7 @@ function render() {
 
         <section class="cta" id="cta">
           <div class="cta__image">
-            <img src="/assets/battlefield-lore.png" alt="" />
+            <img src="${asset("battlefield-lore.png")}" alt="" />
           </div>
           <div class="cta__copy">
             <p class="eyebrow">Live at the T115 Arena</p>
